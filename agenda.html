@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emploi du Temps</title>
+ 
+  <style>
+
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f9fc;
+            color: #333;
+			
+        }
+
+        
+        .global-header {
+            background: #1a237e;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .global-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .global-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+
+        .global-nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+       
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .welcome-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-text {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1a237e;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #3949ab;
+        }
+
+        .btn-container {
+            margin-top: 1.5rem;
+        }
+
+       
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .global-nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+        }	
+
+		h1 {
+		 text-align: center;
+		}
+
+		table {
+		 width: 100%;
+		 border-collapse: collapse;
+		 margin: 20px 0;
+		}
+
+		th, td {
+		 padding: 15px;
+		 text-align: center;
+		 border: 1px solid #ccc;
+		}
+
+		th {
+		 background-color: #0000FF;
+		 color: white;
+		}
+
+		tr:nth-child(even) {
+		 background-color: #f2f2f2;
+		}
+
+		tr:hover {
+		 background-color: #ddd;
+		}
+
+		
+		.orange { background-color: #FFA500; }
+		.bleu-fonce { background-color: #003366; color: white; }
+		.rose-clair { background-color: #FFCCCB; }
+		.jaune { background-color: #FFFF00; }
+		.rose-fonce { background-color: #D5006D; color: white; }
+		.vert-clair { background-color: #90EE90; }
+		.rouge { background-color: #FF0000; color: white; }
+		.vert { background-color: #008000; color: white; }
+		.vert-fonce { background-color: #006400; color: white; }
+		.bleu-clair { background-color:  #ADD8E6; }
+		.pause { background-color: #C0C0C0; }
+	
+		
+		
+		.legend {
+         margin-top: 40px;
+         text-align: center;
+		}
+
+		.legend h2 {
+		 margin-bottom: 15px;
+		 font-size: 22px;
+		}
+
+		.legend ul {
+		 list-style-type: none;
+		 padding: 0;
+		 display: flex;
+		 flex-wrap: wrap;
+		 justify-content: center;
+		 max-width: 600px;
+		 margin: auto;
+		}
+
+		.legend li {
+		 display: flex;
+		 align-items: center;
+		 width: 30%;
+		 margin: 10px 0;
+		 font-size: 16px;
+		}
+
+		.legend span {
+		 width: 20px;
+		 height: 20px;
+		 display: inline-block;
+		 margin-right: 10px;
+		 border-radius: 0%;
+		}
+
+	
+	
+  </style>
+</head>
+<body>
+
+ <header class="global-header">
+        <nav class="global-nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <main>
+        <div class="container">
+  <h1>Emploi du Temps</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Heure</th>
+        <th>Lundi</th>
+        <th>Mardi</th>
+        <th>Mercredi</th>
+        <th>Jeudi</th>
+        <th>Vendredi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="bleu-clair">8h-10h</td>
+        <td class="orange">Anglais</td>
+        <td class="bleu-clair"></td>
+        <td class="rose-clair">Bases de données</td>
+        <td class="vert-fonce" rowspan="2">Technologies du Web</td>
+        <td class="vert-clair" rowspan="2">Programmation</td>
+      </tr>
+      <tr>
+        <td class="bleu-clair">10h-12h</td>
+        <td class="bleu-fonce">Réseaux</td>
+        <td class="jaune">Algorithmique</td>
+        <td class="rose-fonce">Génie Logiciel</td>
+      </tr>
+      <tr>
+        <td class="pause" colspan="6"></td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="bleu-clair">13h-15h <br><br> 15h-17h</td>
+        <td class="rose-clair" rowspan="2">Bases de données</td>
+        <td class="vert-clair" rowspan="2">Programmation</td>
+        <td class="rouge">Systèmes</td>
+        <td class="vert" rowspan="2">Sport</td>
+        <td class="orange">Anglais</td>
+      </tr>
+      <tr>
+        <td class="bleu-clair"></td>
+        <td class="bleu-clair"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="legend">
+    <h2>Légende</h2>
+    <ul>
+      <li><span class="orange"></span> Anglais</li>
+      <li><span class="bleu-fonce"></span> Réseaux</li>
+      <li><span class="rose-clair"></span> Bases de données</li>
+      <li><span class="jaune"></span> Algorithmique</li>
+      <li><span class="rose-fonce"></span> Génie Logiciel</li>
+      <li><span class="vert-clair"></span> Programmation</li>
+      <li><span class="rouge"></span> Systèmes</li>
+      <li><span class="vert"></span> Sport</li>
+      <li><span class="vert-fonce"></span> Technologies du Web</li>      
+    </ul>
+  </div>
+  </div>
+ </main>
+ 
+ <footer style="background: #1a237e; color: white; text-align: center; padding: 1rem; margin-top: 3rem;">
+        <p>© 2025 Fadil YAMEOGO - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>

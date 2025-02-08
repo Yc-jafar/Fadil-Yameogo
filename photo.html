@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Fadil YAMEOGO</title>
+   
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f7f9fc;
+            color: #333;
+            text-align: center;
+        }
+
+       
+        .global-header {
+            background: #1a237e;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .global-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .global-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+
+        .global-nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+       
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        
+        .welcome-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a237e;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-text {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+       
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .global-nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="global-header">
+        <nav class="global-nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="welcome-title">Ma Galerie de Photos</h1>
+            <p class="welcome-text">Découvrez quelques-unes de mes photos préférées.</p>
+
+            <div class="gallery">
+                <img src="photo1.jpg" alt="Photo 1">
+                <img src="photo2.jpg" alt="Photo 2">
+                <img src="photo3.jpg" alt="Photo 3">
+                <img src="photo4.jpg" alt="Photo 4">
+                <img src="photo5.jpg" alt="Photo 5">
+                <img src="photo6.jpg" alt="Photo 6">
+            </div>
+        </div>
+    </main>
+
+    <footer style="background: #1a237e; color: white; text-align: center; padding: 1rem; margin-top: 3rem;">
+        <p>© 2025 Fadil YAMEOGO - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
